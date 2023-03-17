@@ -1,4 +1,4 @@
-export default (size) => {
+export function sizeFormat(size) {
   if (size > 1024 * 1024 * 1024) {
     return (size / (1024 * 1024 * 1024)).toFixed(1) + "Gb";
   }
@@ -9,4 +9,4 @@ export default (size) => {
     return (size / 1024).toFixed(1) + "Kb";
   }
   return size + "B";
-};
+}
