@@ -7,7 +7,7 @@ import { API_URL } from "../../config";
 import avatarLogo from "../../assets/default.svg";
 import { sizeFormat } from "../../utils/sizeFormat";
 import { checkCurrentPage } from "../../reducers/appReducer";
-import Select from "react-select";
+
 const Profile = () => {
   const dispatch = useDispatch();
   function changeHandler(e) {
@@ -27,15 +27,15 @@ const Profile = () => {
     setProfileInfo(currentUser);
   }, [currentUser]);
 
-  const avatar = profileInfo.avatar
-    ? `${API_URL + profileInfo.avatar}`
-    : avatarLogo;
+  // const avatar = profileInfo.avatar
+  //   ? `${API_URL + profileInfo.avatar}`
+  //   : avatarLogo;
   let percentUsageDisk = Math.floor(
     (profileInfo.usedSpace / profileInfo.diskSpace) * 100
   );
   return (
     <div className="user__profile">
-      <img className="user__profile__avatar" src={avatar} alt="" />
+      <img className="user__profile__avatar" src="" alt="" />
       <div className="user__profile__change__avatar">
         <button>
           <label for="user__profle__uploadAvatar">Сменить</label>
