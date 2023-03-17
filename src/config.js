@@ -1,1 +1,1 @@
-export const API_URL = "pern-cloud.up.railway.app/";
+export const API_URL = "https://pern-cloud.up.railway.app/";
