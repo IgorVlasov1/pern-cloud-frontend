@@ -1,0 +1,65 @@
+.user__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15em;
+}
+.user__profile__avatar {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid #05386b;
+}
+.user__profile__name {
+  font-weight: 520;
+  margin-top: 0.5em;
+  font-size: 20px;
+}
+.user__profle__uploadAvatar {
+  display: none;
+}
+.user__profile__change__avatar {
+  margin-top: 0.3em;
+  display: flex;
+  cursor: pointer;
+}
+.user__profile__change__avatar button {
+  margin: 5px 5px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 7.5em;
+  height: 3em;
+  border-radius: 25px;
+  background: #05386b;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.user__profile__progress-bar {
+  background-color: white;
+  height: 20px;
+  padding: 3px;
+  width: 200px;
+  margin-top: 1em;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.user__profile__progress-bar span {
+  display: inline-block;
+  height: 15px;
+  width: 80px;
+  background-color: #05386b;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.user__profile__usedSpace__text {
+  margin-top: 0.5em;
+  font-size: 20px;
+}
