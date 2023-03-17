@@ -5,7 +5,7 @@ import "./profile.css";
 import { useSelector } from "react-redux";
 import { API_URL } from "../../config";
 import avatarLogo from "../../assets/default.svg";
-import sizeFormat from "../../utils/sizeFormat";
+import { sizeFormat } from "../../utils/sizeFormat";
 import { checkCurrentPage } from "../../reducers/appReducer";
 import Select from "react-select";
 const Profile = () => {

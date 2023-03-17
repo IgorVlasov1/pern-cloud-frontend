@@ -18,7 +18,7 @@ import {
   downloadFile,
   setLastOpenDate,
 } from "../../../actions/file";
-import sizeFormat from "../../../utils/sizeFormat";
+import { sizeFormat } from "../../../utils/sizeFormat";
 import { BsFillCloudDownloadFill } from "react-icons/bs";
 import { AiFillDelete, AiFillStar } from "react-icons/ai";
 const File = ({ file }) => {
