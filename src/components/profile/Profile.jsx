@@ -27,15 +27,15 @@ const Profile = () => {
     setProfileInfo(currentUser);
   }, [currentUser]);
 
-  // const avatar = profileInfo.avatar
-  //   ? `${API_URL + profileInfo.avatar}`
-  //   : avatarLogo;
+  const avatar = currentUser.avatar
+    ? `${API_URL + currentUser.avatar}`
+    : avatarLogo;
   let percentUsageDisk = Math.floor(
     (profileInfo.usedSpace / profileInfo.diskSpace) * 100
   );
   return (
     <div className="user__profile">
-      <img className="user__profile__avatar" src="" alt="" />
+      <img className="user__profile__avatar" src={avatar} alt="" />
       <div className="user__profile__change__avatar">
         <button>
           <label for="user__profle__uploadAvatar">Сменить</label>
