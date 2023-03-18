@@ -89,9 +89,10 @@
   background: #b8bdc7;
 }
 .hiddenPassword {
-  position: fixed;
-  left: 35.4em;
-  top: 18.3em;
+  position: relative;
+  cursor: pointer;
+  left: 6em;
+  bottom: 1.9em;
 }
 .hiddenPassword:hover {
   cursor: pointer;
@@ -103,7 +104,7 @@
   bottom: 1.9em;
 }
 .inputCopyPassword {
-  margin-top: 1.5em;
+  margin-top: 0.4em;
   position: relative;
   font-size: 15px;
   line-height: 1.5;

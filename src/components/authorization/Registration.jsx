@@ -4,7 +4,13 @@ import { BsFillEyeSlashFill } from "react-icons/bs";
 import styles from "./Register.module.css";
 import Input from "../../utils/input/Input";
 import "./authorization.css";
+import { useDispatch, useSelector } from "react-redux";
+import { showMessage } from "../../reducers/appReducer";
+import { setFileActionsInfo } from "../../reducers/fileReducer";
+import FileActionsInfo from "../disk/FileActionsInfo";
 const Registration = () => {
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState("");
   const [visiblePassword, setVisiblePassword] = useState("password");
   const [password, setPassword] = useState("");
@@ -137,11 +143,15 @@ const Registration = () => {
 
         <button
           disabled={!formValid}
-          onClick={() => registration(email, password)}
+          onClick={() => {
+            registration(email, password);
+            dispatch(setFileActionsInfo(0, "Аккаунт создан", "flex"));
+          }}
         >
           Регистрация
         </button>
       </form>
+      <FileActionsInfo />
     </>
   );
 };

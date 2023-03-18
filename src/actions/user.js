@@ -1,21 +1,19 @@
 import axios from "axios";
 import { API_URL } from "../config";
 import { setUser } from "../reducers/userReducer";
-import { setFileActionsInfo } from "../reducers/fileReducer";
+
 export const registration = async (email, password) => {
-  return async (dispatch) => {
-    try {
-      const response = await axios.post(`${API_URL}api/auth/registration`, {
-        email,
-        password,
-      });
-      dispatch(setFileActionsInfo(0, response.data.message, "flex"));
-      // alert(response.data.message);
-    } catch (e) {
-      alert(e.response.data.message);
-    }
-  };
+  try {
+    const response = await axios.post(`${API_URL}api/auth/registration`, {
+      email,
+      password,
+    });
+    alert(response.data.message);
+  } catch (e) {
+    alert(e.response.data.message);
+  }
 };
+
 export const login = (email, password) => {
   return async (dispatch) => {
     try {
