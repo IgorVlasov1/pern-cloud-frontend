@@ -11,7 +11,7 @@ const Login = () => {
 
   return (
     <div className="authForm">
-      <div className="authForm__header">Вход</div>
+      <div className="authForm__header">Вход в аккаунт</div>
       <Input
         value={email}
         setValue={setEmail}

@@ -1,0 +1,128 @@
+.formReg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px;
+  margin: 13em auto;
+}
+.emailInput {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 3em;
+  width: 15em;
+  border-radius: 25px;
+  padding: 0px 20px 0px 20px;
+  outline: none;
+  border: none;
+  overflow: visible;
+  text-align: start;
+  appearance: auto;
+}
+.passwordInput {
+  margin-top: 1.5em;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 3em;
+  width: 15em;
+  border-radius: 25px;
+  padding: 0px 20px 0px 20px;
+  outline: none;
+  border: none;
+  overflow: visible;
+  text-align: start;
+  appearance: auto;
+}
+
+.formReg button {
+  margin-top: 0.5em;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  width: 15em;
+  height: 3em;
+  border-radius: 25px;
+  background: #05386b;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+.formReg button:hover {
+  cursor: pointer;
+  background: #02213f;
+}
+.formReg .emailCheck {
+  position: absolute;
+  display: block;
+  top: 17.3em;
+  color: #d6132d;
+  font-size: 15px;
+  margin: 0;
+}
+.formReg .passCheck {
+  display: block;
+  position: absolute;
+  color: #d6132d;
+  font-size: 15px;
+  margin: 0;
+}
+.formReg .copyPassCheck {
+  display: block;
+  position: absolute;
+  color: #d6132d;
+  font-size: 15px;
+  top: 26.3em;
+  margin: 0;
+}
+.formReg button:disabled {
+  cursor: default;
+  background: #b8bdc7;
+}
+.hiddenPassword {
+  position: fixed;
+  left: 35.4em;
+  top: 18.3em;
+}
+.hiddenPassword:hover {
+  cursor: pointer;
+}
+.checkCopyPassword {
+  cursor: pointer;
+  position: relative;
+  left: 6em;
+  bottom: 1.9em;
+}
+.inputCopyPassword {
+  margin-top: 1.5em;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 3em;
+  width: 15em;
+  border-radius: 25px;
+  padding: 0px 20px 0px 20px;
+  outline: none;
+  border: none;
+  overflow: visible;
+  text-align: start;
+  appearance: auto;
+}
+.formRegTitle {
+  position: absolute;
+  top: 8.5em;
+  font-size: 20px;
+}
