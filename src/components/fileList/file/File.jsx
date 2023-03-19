@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./file.css";
 import { AiFillFile, AiFillFolder } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import {
   pushToStack,
   setChosenFiles,
-  // setChosenFiles,
   setCurrentDir,
   setCurrentDirToDelete,
   setDeleteFolderPopup,
@@ -38,14 +37,13 @@ const File = ({ file }) => {
       setSelectFile(!selectFile);
       if (stackOfFiles.includes(file)) {
         let idx = stackOfFiles.indexOf(file);
-        console.log("index: ", idx);
+
         stackOfFiles.splice(idx, idx !== -1 ? 1 : 0);
       } else {
         stackOfFiles.push(file);
         dispatch(setStackFilesToDelete(stackOfFiles));
       }
     }
-    console.log("Выбранные файлы: ", stackOfFiles);
   }
 
   function openDirHandler(file) {

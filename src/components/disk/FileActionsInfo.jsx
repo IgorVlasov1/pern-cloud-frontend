@@ -26,7 +26,7 @@ const FileActionsInfo = () => {
       clearInterval(interval);
       setProgress(0);
     };
-  }, []);
+  }, [infoToShow]);
   return (
     <div
       className={

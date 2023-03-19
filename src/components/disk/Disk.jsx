@@ -1,9 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createDir, getFiles, uploadFile } from "../../actions/file";
+import { getFiles, uploadFile } from "../../actions/file";
 import {
-  popFromStack,
-  pushToStack,
   setCurrentDir,
   setFileView,
   setPopupDisplay,
@@ -11,10 +9,10 @@ import {
 
 import FileList from "../fileList/FileList";
 import Uploader from "../fileList/uploader/Uploader";
-import Select from "react-select";
+
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { MdOutlineCreateNewFolder } from "react-icons/md";
-import { AiFillClockCircle, AiOutlineUnorderedList } from "react-icons/ai";
+import { AiOutlineUnorderedList } from "react-icons/ai";
 import { IoReturnUpBackSharp } from "react-icons/io5";
 import { ImFloppyDisk } from "react-icons/im";
 import { BiTimeFive } from "react-icons/bi";
@@ -30,7 +28,6 @@ const Disk = () => {
   const currentDir = useSelector((state) => state.files.currentDir);
   const loader = useSelector((state) => state.app.loader);
   const dirStack = useSelector((state) => state.files.dirStack);
-  // const chosenDirStack = useSelector((state) => state.files.chosenFileStack);
 
   const chosenFile = useSelector((state) => state.files.chosenFileStack);
   const files = useSelector((state) => state.files.files);
@@ -39,7 +36,6 @@ const Disk = () => {
   const [chosen, setChosen] = useState("");
 
   useEffect(() => {
-    // setFileStack(files);
     dispatch(getFiles(currentDir, sort, chosen));
   }, [currentDir, sort, chosen, chosenFile]);
 

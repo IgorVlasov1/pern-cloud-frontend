@@ -1,17 +1,13 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentDir, setPopupDisplay } from "../../reducers/fileReducer";
 import "./fileList.css";
 import File from "./file/File";
-import { useEffect, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 const FileList = () => {
-  const dispatch = useDispatch();
   const files = useSelector((state) => state.files.files);
   const fileView = useSelector((state) => state.files.view);
   const currentTextSearch = useSelector((state) => state.files.searchText);
 
-  console.log(currentTextSearch);
   if (fileView === "list") {
     return (
       <div className="fileList">

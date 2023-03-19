@@ -2,11 +2,8 @@ import React, { useState, useEffect } from "react";
 import { registration } from "../../actions/user";
 import { BsFillEyeSlashFill } from "react-icons/bs";
 import styles from "./Register.module.css";
-import Input from "../../utils/input/Input";
 import "./authorization.css";
-import { useDispatch, useSelector } from "react-redux";
-import { showMessage } from "../../reducers/appReducer";
-import { setFileActionsInfo } from "../../reducers/fileReducer";
+import { useDispatch } from "react-redux";
 import FileActionsInfo from "../disk/FileActionsInfo";
 const Registration = () => {
   const dispatch = useDispatch();
@@ -79,8 +76,8 @@ const Registration = () => {
   };
   const handlePassword = (e) => {
     setPassword(e.target.value);
-    if (e.target.value.length < 8) {
-      setPasswordError("Пароль должен содержать не менее 8 символов");
+    if (e.target.value.length < 3 || e.target.value.length > 12) {
+      setPasswordError("Пароль должен содержать более 3 и менее 12 символов");
     } else {
       setPasswordError("");
     }
@@ -143,9 +140,10 @@ const Registration = () => {
 
         <button
           disabled={!formValid}
-          onClick={() => {
-            registration(email, password);
-            dispatch(setFileActionsInfo(0, "Аккаунт создан", "flex"));
+          onClick={(e) => {
+            console.log(123);
+            e.preventDefault();
+            dispatch(registration(email, password));
           }}
         >
           Регистрация
@@ -155,27 +153,4 @@ const Registration = () => {
     </>
   );
 };
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   return (
-//     <div className="authForm">
-//       <div className="authForm__header">Регистрация</div>
-//       <Input
-//         value={email}
-//         setValue={setEmail}
-//         type="text"
-//         placeholder="Введите email"
-//       />
-//       <Input
-//         value={password}
-//         setValue={setPassword}
-//         type="password"
-//         placeholder="Введите пароль"
-//       />
-
-//       <button onClick={() => registration(email, password)}>Регистрация</button>
-//     </div>
-//   );
-// };
-
 export default Registration;

@@ -13,7 +13,6 @@ const Navbar = () => {
   const currentDir = useSelector((state) => state.files.currentDir);
   const currentUser = useSelector((state) => state.user.currentUser);
   const currentPage = useSelector((state) => state.app.currentPage);
-  console.log(currentPage);
   const dispatch = useDispatch();
   const [searchName, setSearchName] = useState("");
   const [searchTimeout, setSearchTimeout] = useState(false);
